@@ -1,0 +1,22 @@
+[
+  {
+    "user_name": "blogger",
+    "password": "password"
+  },
+  {
+    "user_name": "testing",
+    "password": "password"
+  },
+  {
+    "user_name": "MVC_fanatic",
+    "password": "password"
+  },
+  {
+    "user_name": "commenter",
+    "password": "password"
+  },
+  {
+    "user_name": "tech_expert12",
+    "password": "password"
+  }
+]
