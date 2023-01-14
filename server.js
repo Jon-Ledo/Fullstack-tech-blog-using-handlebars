@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001
 const sequelize = require('./config/connection')
 const routes = require('./controllers/routes')
 
-session
+// session
 const sess = {
   secret: 'Super secret secret',
   resave: false,
@@ -17,11 +17,11 @@ const sess = {
 app.use(session(sess))
 
 // handlebars
-// const exphbs = require('express-handlebars')
-// const helpers = require('./utils/helpers')
-// const hbs = exphbs.create({ helpers })
-// app.engine('handlebars', hbs.engine)
-// app.set('view engine', 'handlebars')
+const exphbs = require('express-handlebars')
+const helpers = require('./utils/helpers')
+const hbs = exphbs.create({ helpers })
+app.engine('handlebars', hbs.engine)
+app.set('view engine', 'handlebars')
 
 // general middlewares
 app.use(express.json())

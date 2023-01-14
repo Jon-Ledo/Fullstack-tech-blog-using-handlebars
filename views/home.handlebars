@@ -1,0 +1,28 @@
+{{log postsData}}
+
+<section class="posts-container">
+  {{#each postsData}}
+  
+  <article class="post-container">
+    <header class="post-header">
+      <h3>{{title}}</h3>
+      <p>Posted by {{user.user_name}} on {{format_date createdAt}}</p>
+    </header>
+  </article>
+
+  {{/each}}
+</section>
+
+
+{{!-- 
+
+id
+title
+text
+user_id
+createdAt
+updatedAt
+
+user.user_name
+
+ --}}
