@@ -1,28 +1,76 @@
-{{log postsData}}
-
+{{#if loggedIn}}
 <section class="posts-container">
   {{#each postsData}}
-  
-  <article class="post-container">
-    <header class="post-header">
-      <h3>{{title}}</h3>
-      <p>Posted by {{user.user_name}} on {{format_date createdAt}}</p>
-    </header>
-  </article>
 
+  <article class="post" data-post-id="{{id}}">
+    
+    <header class="header-container">
+      <div class="post-title">
+        <p>{{title}}</p>
+        <button type="button" class="post-btn">
+          <span class="plus-icon">
+            <i class="far fa-plus-square"></i>
+          </span>
+          <span class="minus-icon">
+            <i class="far fa-minus-square"></i>
+          </span>
+        </button>
+      </div>
+      <div class="sub-heading">
+        <p>Posted by {{user.user_name}} on {{format_date createdAt}}</p>
+      </div>
+    </header>
+    
+    <div class="post-text">
+      <p>{{text}}</p>
+      <div class="post-comment">
+        <a href="/comment">
+          <button type="button">Leave a comment</button>
+        </a>
+      </div>
+    </div>
+
+  </article>
   {{/each}}
 </section>
 
+{{else}}
 
-{{!-- 
+<section class="posts-container">
+  {{#each postsData}}
 
-id
-title
-text
-user_id
-createdAt
-updatedAt
+  <article class="post" data-post-id="{{id}}">
 
-user.user_name
+    <header class="header-container">
+      <div class="post-title">
+        <p>{{title}}</p>
+        <button type="button" class="post-btn">
+          <span class="plus-icon">
+            <i class="far fa-plus-square"></i>
+          </span>
+          <span class="minus-icon">
+            <i class="far fa-minus-square"></i>
+          </span>
+        </button>
+      </div>
+      <div class="sub-heading">
+        <p>Posted by {{user.user_name}} on {{format_date createdAt}}</p>
+      </div>
+    </header>
 
- --}}
+    <div class="post-text">
+      <p>{{text}}</p>
+      <div class="post-comment">
+        <a href="/login">
+          <button type="button">Leave a comment</button>
+        </a>
+        <p>You must be <a href="/login">logged in</a>, in order to leave a comment</p>
+
+      </div>
+    </div>
+
+  </article>
+  {{/each}}
+</section>
+
+{{/if}}
