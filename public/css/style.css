@@ -1,0 +1,66 @@
+.post {
+  background-color: #c7f7f7;
+  border-radius: 5px;
+  box-shadow: #354546;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.post-title p {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.post-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.post-text {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.post-comment {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.post-comment button {
+  background-color: #186369;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+}
+
+/* hide text by default*/
+.post-text {
+  display: none;
+}
+
+.show-text .post-text {
+  display: block;
+}
+
+/* hide minus icon by default */
+.minus-icon {
+  display: none;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}

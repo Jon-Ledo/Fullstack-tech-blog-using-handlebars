@@ -26,11 +26,17 @@ router.get('/', async (req, res) => {
 
 // login/signup page
 router.get('/login', async (req, res) => {
-  res.render('login')
+  res.render('login', {
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+  })
 })
 
 router.get('/sign-up', async (req, res) => {
-  res.render('sign-up')
+  res.render('sign-up', {
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+  })
 })
 
 // dashboard
