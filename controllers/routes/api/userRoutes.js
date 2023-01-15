@@ -100,13 +100,11 @@ router.post('/login', async (req, res) => {
       where: { user_name: req.body.user_name },
     })
 
-    console.log(req.body.user_name)
-
     // no match?
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' })
+        .json({ message: 'Incorrect username or password, please try again' })
       return
     }
 
