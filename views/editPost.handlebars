@@ -1,0 +1,17 @@
+<h1>editing</h1>
+
+{{#with postData}}
+
+<form id="blog-form" data-post-id="{{id}}">
+  <div class="mb-3">
+    <label for="blog-title" class="col-form-label">
+      Title:</label>
+    <input type="text" class="form-control" id="edit-blog-title" placeholder="{{title}}">
+  </div>
+  <div class="mb-3">
+    <label for="blog-text" class="col-form-label">Text:</label>
+    <textarea class="form-control" id="edit-blog-text" style="height: 150px;">{{text}}</textarea>
+  </div>
+  <button type="button" class="btn btn-outline-dark" id="edit-btn">Submit</button>
+</form>
+{{/with}}

@@ -68,3 +68,9 @@
 .show-text .plus-icon {
   display: none;
 }
+/* #2C3E50 */
+
+.blog-post {
+  background-color: #c7f7f7;
+  padding: 0.5rem;
+}
