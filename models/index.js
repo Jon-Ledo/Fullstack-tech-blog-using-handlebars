@@ -29,4 +29,12 @@ Comment.belongsTo(User, {
   foreignKey: 'user_id',
 })
 
+Post.belongsToMany(User, {
+  through: {
+    model: Comment,
+    unique: false,
+  },
+  as: 'user_comments',
+})
+
 module.exports = { User, Post, Comment }
