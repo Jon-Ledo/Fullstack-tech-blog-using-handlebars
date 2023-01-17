@@ -1,1 +1,35 @@
 <h1>dashboard</h1>
+
+{{#if loggedIn}}
+<section class="dashboard-section">
+  <div class="row">
+    <div class="btn-container col-md-12 d-flex justify-content-center">
+      <button type="button" class="btn btn-outline-dark btn-lg" id="newPostBtn" data-bs-toggle="modal" data-bs-target="#myModal">New Post +</button>
+    </div>
+
+  {{#with userData}}  
+  <h2 id="user" data-user-id="{{id}}">{{user_name}}</h2>
+
+  {{#each posts}}
+  <div class="blog-post" data-post-id="{{id}}">
+    <header class="blog-post-header">
+    <h3 class="blog-post-title">{{title}}</h3>
+    <button type="button" class="btn btn-outline-dark">
+      <a href="/dashboard/edit-blog-post/{{id}}">Edit Post</a>
+    </button>
+    </header>
+    <p>
+    {{text}}
+    </p>
+  </div>
+
+  <hr>
+
+  {{/each}}
+
+  {{> modalNewPost}}
+
+  {{/with}}
+  </div>
+</section>
+{{/if}}
