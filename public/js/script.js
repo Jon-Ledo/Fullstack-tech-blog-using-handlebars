@@ -1,6 +1,7 @@
 if (window.location.pathname === '/') {
   const posts = document.querySelectorAll('.post')
 
+  // toggle the accordion panels
   posts.forEach((post) => {
     const btn = post.querySelector('.post-btn')
     btn.addEventListener('click', () => {
