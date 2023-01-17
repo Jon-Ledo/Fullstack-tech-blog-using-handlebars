@@ -8,7 +8,7 @@ function addComment(event) {
   event.preventDefault()
 
   // user's written comment
-  const commentText = event.target[0].value
+  const commentTextEl = event.target[0]
 
   // user id found on the logout btn
   const id = document.querySelector('#logout')
@@ -19,12 +19,16 @@ function addComment(event) {
 
   // build the object for POST request
   const newComment = {
-    text: commentText,
+    text: commentTextEl.value,
     user_id: userId,
     post_id: postId,
   }
 
-  postCommentDB(newComment)
+  postCommentDB(newComment).then(() => {
+    // refresh page and values
+    commentTextEl.value = ''
+    window.location.reload()
+  })
 }
 
 const postCommentDB = (newComment) => {

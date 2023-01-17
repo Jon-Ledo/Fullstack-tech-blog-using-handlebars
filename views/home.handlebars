@@ -23,9 +23,25 @@
     
     <div class="post-text">
       <p>{{text}}</p>
+
       <div class="comments-container">
         {{!-- New comments to be put here --}}
-        
+
+        <div class="comments">
+          {{#each user_comments}}
+          <div class="card">
+            <h5 class="card-header">
+              Posted by {{user_name}}, on {{format_date comment.createdAt}}
+            </h5>
+            <section class="comment card-body">
+              <div class="text">
+                {{comment.text}}
+              </div>
+            </section>
+          </div>
+          {{/each}}
+        </div>
+
       </div>
       <div class="post-comment">
         <form class="comment-container" data-comments-box="{{id}}">

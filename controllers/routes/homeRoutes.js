@@ -7,7 +7,15 @@ router.get('/', async (req, res) => {
   // load all posts into main page
   try {
     const dbPostsData = await Post.findAll({
-      include: [{ model: User, attributes: ['id', 'user_name'] }],
+      include: [
+        {
+          model: User,
+          attributes: ['id', 'user_name'],
+          through: Comment,
+          as: 'user_comments',
+        },
+        { model: Comment },
+      ],
     })
 
     const postsData = dbPostsData.map((data) => {
@@ -20,7 +28,7 @@ router.get('/', async (req, res) => {
       user_id: req.session.user_id,
     })
   } catch (error) {
-    res.render('error in loading')
+    res.render(error)
   }
 })
 
