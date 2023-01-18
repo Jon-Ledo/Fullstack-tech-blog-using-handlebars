@@ -1,4 +1,4 @@
-if (window.location.pathname === '/dashboard') {
+if (window.location.pathname.includes('/dashboard')) {
   const formSubmitBtn = document.querySelector('#form-submit-btn')
   const user = document.querySelector('#user')
   const userID = parseInt(user.dataset.userId)
@@ -7,18 +7,18 @@ if (window.location.pathname === '/dashboard') {
   formSubmitBtn.addEventListener('click', (event) => {
     event.preventDefault()
 
-    let blogTitle = document.querySelector('#blog-title').value.trim()
-    let blogText = document.querySelector('#blog-text').value.trim()
+    const blogTitle = document.querySelector('#blog-title')
+    const blogText = document.querySelector('#blog-text')
 
     const newBlogPostObj = {
-      title: blogTitle,
-      text: blogText,
+      title: blogTitle.value.trim(),
+      text: blogText.value.trim(),
       user_id: userID,
     }
 
     postBlogToDB(newBlogPostObj).then(() => {
-      blogTitle = ''
-      blogText = ''
+      blogTitle.value = ''
+      blogText.value = ''
       window.location.reload()
     })
   })
