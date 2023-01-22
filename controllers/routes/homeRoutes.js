@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
           through: Comment,
           as: 'user_comments',
         },
-        { model: Comment },
+        { model: User, attributes: ['id', 'user_name'] },
       ],
     })
 
@@ -47,13 +47,6 @@ router.get('/sign-up', async (req, res) => {
   })
 })
 
-// dashboard
-// router.get('/dashboard', async (req, res) => {
-//   res.render('dashboard', {
-//     loggedIn: req.session.loggedIn,
-//     user_id: req.session.user_id,
-//   })
-// })
 router.get('/dashboard/:id', async (req, res) => {
   try {
     const dbUSerData = await User.findByPk(req.params.id, {
