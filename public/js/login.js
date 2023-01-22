@@ -33,7 +33,8 @@ const signupFormHandler = async (event) => {
     })
 
     if (response.ok) {
-      document.location.replace('/')
+      // login after succesful creation
+      loginFormHandler(event)
     } else {
       alert('Failed to sign up.')
     }
