@@ -1,9 +1,43 @@
-.post {
-  background-color: #c7f7f7;
+:root {
+  --primary-dark: #3c5268;
+  --primary-dark-hover: #2c3e50;
+  --primary-text: #dfe2e5;
+  --high-light: #18bc9c;
+  --body: #cfe5e7;
+  --primary-box: #95a5a6;
+  --comment-box-header: #b0c1c2;
+  --comment-box: #c7e3e6;
+
+  --button: #b0bfc0;
+  --button-hover: #7f8c8d;
+}
+
+body {
+  background-color: var(--body);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-dark);
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  color: var(--primary-text);
+}
+
+/* Posts */
+.post,
+.blog-post {
+  background-color: var(--primary-box);
   border-radius: 5px;
-  box-shadow: #354546;
+  box-shadow: 2px 2px 4px #354546;
   padding: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .post-title {
@@ -17,6 +51,11 @@
 .post-title p {
   margin-bottom: 0;
   letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.sub-heading p {
+  margin-bottom: 0;
 }
 
 .post-btn {
@@ -42,9 +81,14 @@
 
 .post-comment button {
   background-color: #186369;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
+}
+
+.post-comment button:hover {
+  background-color: #229098;
 }
 
 /* hide text by default*/
@@ -68,9 +112,33 @@
 .show-text .plus-icon {
   display: none;
 }
-/* #2C3E50 */
 
-.blog-post {
-  background-color: #c7f7f7;
-  padding: 0.5rem;
+/* Comments Cards */
+.card {
+  background-color: var(--comment-box);
+  margin-bottom: 1rem;
+  border: #2c3e50 1px solid;
+}
+
+.card-header {
+  font-weight: bold;
+  background-color: var(--comment-box-header);
+}
+
+.highlight {
+  color: var(--high-light);
+}
+
+textarea {
+  background-color: var(--comment-box);
+}
+
+/* Dashboard styles */
+button a {
+  text-decoration: none;
+  color: black;
+}
+
+button a:hover {
+  color: white;
 }

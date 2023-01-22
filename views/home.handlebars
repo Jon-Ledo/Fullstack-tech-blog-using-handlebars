@@ -31,7 +31,7 @@
           {{#each user_comments}}
           <div class="card">
             <h5 class="card-header">
-              Posted by {{user_name}}, on {{format_date comment.createdAt}}
+              Posted by <span class="highlight">{{user_name}}</span>, on {{format_date comment.createdAt}}
             </h5>
             <section class="comment card-body">
               <div class="text">
@@ -96,7 +96,7 @@
           {{#each user_comments}}
           <div class="card">
             <h5 class="card-header">
-              Posted by {{user_name}}, on {{format_date comment.createdAt}}
+              Posted by <span class="highlight">{{user_name}}</span>, on {{format_date comment.createdAt}}
             </h5>
             <section class="comment card-body">
               <div class="text">
