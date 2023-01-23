@@ -6,6 +6,7 @@ const { User, Post, Comment } = require('../../../models')
 router.get('/', async (req, res) => {
   try {
     const dbUsersData = await User.findAll({
+      attributes: ['id', 'user_name', 'createdAt'],
       include: [{ model: Post }],
     })
 
@@ -23,6 +24,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const dbUserData = await User.findByPk(req.params.id, {
+      attributes: ['id', 'user_name', 'createdAt'],
       include: [{ model: Post }],
     })
 
