@@ -1,4 +1,4 @@
-Model-View-Controller (MVC): Tech Blog
+# Model-View-Controller (MVC): Tech Blog
 
 ![license badge](./Assets/license-badge.svg)
 
