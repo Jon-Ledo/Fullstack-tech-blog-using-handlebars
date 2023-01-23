@@ -22,6 +22,10 @@ body {
   font-size: 1.5rem;
 }
 
+.navbar-toggler-icon {
+  color: white;
+}
+
 .navbar-brand {
   font-weight: bold;
 }
@@ -134,11 +138,23 @@ textarea {
 }
 
 /* Dashboard styles */
-button a {
-  text-decoration: none;
-  color: black;
+.blog-post-title,
+.edit-label {
+  font-weight: bold;
 }
 
-button a:hover {
+button a {
+  text-decoration: none;
   color: white;
+}
+
+.edit-btn {
+  color: white;
+  background-color: #186369;
+  border: none;
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #229098;
 }
