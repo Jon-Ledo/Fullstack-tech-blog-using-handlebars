@@ -1,21 +1,56 @@
 # 14 Model-View-Controller (MVC): Tech Blog
 
-## Your Task
+![license badge](./Assets/license-badge.svg)
 
-Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. A simple Google search for any concept covered in this course returns thousands of think pieces and tutorials from developers of all skill levels!
+- [link to live site](https://tech-blog-crud-app-15634.herokuapp.com/)
 
-Your task this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+## Description
 
-## Mock-Up
+A blog site setup where developers and other tech savvy people can publish their blog posts and comment on other users' posts as well.
 
-The following animation demonstrates the application functionality:
+Deployed to Heroku, it follows the MVC paradigm in its architectural structure, using [express-handlebars](https://www.npmjs.com/package/express-handlebars) as the templating language, [Sequelize](https://www.npmjs.com/package/sequelize) as the ORM, and the [express-session](https://www.npmjs.com/package/express-session) npm package for authentication.
 
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif)
+## Table of Contents
 
-## Getting Started
+- [Preview](#preview)
+- [Packages Used](#packages)
+- [License](#license)
+- [Questions](#questions)
 
-Your application’s folder structure must follow the Model-View-Controller paradigm. You’ll need to use the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views, use the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database for your Models, and create an Express.js API for your Controllers.
+## Preview
 
-You’ll also need the [dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables, the [bcrypt package](https://www.npmjs.com/package/bcrypt) to hash passwords, and the [express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) packages to add authentication.
+Home Page
 
-**Note**: The [express-session](https://www.npmjs.com/package/express-session) package stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required to log in again to start a new session. This is the default behavior and you do not have to do anything to your application other than implement the npm package.
+![homepage preview](./Assets/tech-blog-preview.JPG)
+
+Creating a new blog post from your dashboard
+
+![posting a new blog preview](./Assets/tech-blog-new-post-preview.JPG)
+
+## Packages
+
+Project put together using the following libraries/packages:
+
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [cors](https://www.npmjs.com/package/cors)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Express.js](https://expressjs.com/)
+- [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
+- [Express-session](https://www.npmjs.com/package/express-session)
+- [handlebars](https://handlebarsjs.com/)
+- [mySql2](https://www.npmjs.com/package/mysql2)
+- [Sequelize](https://sequelize.org/)
+
+## License
+
+[![license badge](./Assets/license-badge.svg)](https://choosealicense.com/licenses/mit/)
+
+For more information about the licensing of this project, please click on the badge above, or follow this link https://choosealicense.com/licenses/mit/
+
+## Questions
+
+How to get into contact with me?
+
+[My Github Profile](https://github.com/Jon-Ledo)
+
+Email : jonledo.code@gmail.com
